@@ -8,14 +8,14 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 
-//My suffix tree class ... weeeee
+//My trie class ... allows finding words that start with some input string
 public class Trie
 {
 
-    // root of the suffix tree ... all words under here
+    // root of the tree ... all words under here
     private Node _root = new Node();
 
-    // add a string to the suffix tree.
+    // add a string to the trie.
     public void Add(String addThis)
     {
         // add to the actual nodes
@@ -25,7 +25,7 @@ public class Trie
     //find all elements in the tree that start with: start
     public List<String> StartingWtih(String start)
     {
-        // find node where start string ends at in the suffix tree
+        // find node where start string ends at in the trie
         Node children = DescendTo(start, _root);
 
         // if it is not found, there are not strings starting with start.
